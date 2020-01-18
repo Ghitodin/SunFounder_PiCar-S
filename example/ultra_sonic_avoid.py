@@ -23,8 +23,13 @@ force_turning = 0    # 0 = random direction, 1 = force left, 2 = force right, 3 
 picar.setup()
 
 ua = Ultrasonic_Avoidance.Ultrasonic_Avoidance(20)
-fw = front_wheels.Front_Wheels(db='config')
-bw = back_wheels.Back_Wheels(db='config')
+#fw = front_wheels.Front_Wheels(db='config')
+#bw = back_wheels.Back_Wheels(db='config')
+
+# FIX:
+fw = back_wheels.Back_Wheels(db='config')
+bw = front_wheels.Front_Wheels(db='config')
+
 fw.turning_max = 45
 
 forward_speed = 70
